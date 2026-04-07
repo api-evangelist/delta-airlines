@@ -1,7 +1,11 @@
 aid: delta-airlines
-url: https://raw.githubusercontent.com/api-evangelist/delta-airlines/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/delta-airlines/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.delta-airlines.com
+description: >-
+  Delta Air Lines is a major U.S. airline providing scheduled air transportation for
+  passengers and cargo throughout the United States and across the world.
