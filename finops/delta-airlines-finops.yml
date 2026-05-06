@@ -8,35 +8,40 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: Delta Airlines
 providerId: delta-airlines
-publisherName: Delta Airlines
-serviceCategory: API
+publisherName: Delta Air Lines, Inc.
+serviceCategory: Travel / Airline Distribution
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
+notes: Delta does not publish API pricing or usage telemetry; FinOps shape is inferred from NDC distribution
+  norms (per-shop / per-book transaction fees, GDS pass-throughs, partner agreements). Reconcile when
+  partner contract terms become available.
 tags:
   - Air Travel
   - Airlines
-  - Aviation
-  - Booking
-  - Flights
   - NDC
   - Travel
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Delta Airlines API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
+description: 'FOCUS-aligned FinOps for Delta Airlines APIs (scaffold). Distribution APIs typically follow
+  per-shop and per-book transaction economics under negotiated NDC / partner agreements. No public per-call
+  price exists.'
+sources:
+  - https://developer.delta.com/
 principles:
   - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
+    description: Track Delta NDC API consumption (shopping, pricing, booking, ticketing, ancillary) per
+      partner integration; reconcile shop-to-look ratios, look-to-book ratios, and per-PNR cost via partner
+      reporting feeds.
   - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
+    description: Allocate distribution costs by point-of-sale, channel, and brand; tag every API transaction
+      to the originating retailing platform or call center.
   - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
+    description: Apply NDC offer-management caching, repricing rules, and look-to-book guardrails; reduce
+      excess shopping volume that drives partner-fee ladders.
   - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
+    description: Distribution leaders own per-channel API economics; route NDC SLA breaches and shop-volume
+      anomalies to the contract owner.
 domains:
   - name: Understand Usage and Cost
     capabilities:
@@ -53,21 +58,15 @@ domains:
       - Unit Economics
   - name: Optimize Usage and Cost
     capabilities:
-      - Architecting for Cloud
       - Rate Optimization
       - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
   - name: Manage the FinOps Practice
     capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
       - Invoicing and Chargeback
       - Onboarding Workloads
-      - Intersecting Disciplines
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Negotiated Partner Agreement
+  billingFrequency: Per-Contract
   billingCurrency: USD
   chargeCategories:
     - Usage
@@ -77,45 +76,42 @@ billingModel:
     - Adjustment
   chargeFrequency: Recurring
 focusColumns:
-  ServiceName: Delta Airlines
-  ServiceCategory: Developer Tools / API
+  ServiceName: Delta API Suite
+  ServiceCategory: Travel / Airline Distribution
   ProviderName: Delta Airlines
-  PublisherName: Delta Airlines
-  InvoiceIssuerName: Delta Airlines
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: Delta Air Lines, Inc.
+  InvoiceIssuerName: Delta Air Lines, Inc.
+  PricingCategory: Negotiated
+  PricingUnit: transaction
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-  - name: api_requests
-    description: Count of billable API requests
+  - name: shop_requests
+    description: NDC shopping / availability / fare-search calls
     unit: request
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
+      - partner
+      - channel
+      - market
+  - name: bookings
+    description: NDC orders / PNRs created
+    unit: transaction
     aggregation: sum
     dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
+      - partner
+      - channel
+      - market
+  - name: ancillaries_sold
+    description: Ancillary services (seats, bags, upgrades) sold via API
+    unit: transaction
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
+      - partner
+      - product
 apis:
   - name: Delta API Suite
-    baseURL: ''
+    baseURL: https://developer.delta.com/
     tags:
       - Flights
       - NDC
@@ -125,11 +121,11 @@ apis:
     serviceName: Delta API Suite
     serviceCategory: API
 unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
+  - name: Cost per Booking
+    metric: distribution_cost / bookings
     target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
+  - name: Look-to-Book Ratio
+    metric: shop_requests / bookings
     target: TBD
 maintainers:
   - FN: Kin Lane
