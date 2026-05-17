@@ -17,7 +17,7 @@ tags:
 created: '2024-12-03'
 modified: '2026-04-28'
 specificationVersion: '0.19'
-xType: company
+kind: company
 description: >-
   Delta Airlines (alias of Delta Air Lines) is a major U.S. airline providing
   scheduled air transportation for passengers and cargo throughout the United
