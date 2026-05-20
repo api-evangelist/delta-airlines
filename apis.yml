@@ -47,6 +47,8 @@ apis:
       - type: Alias
         url: https://github.com/api-evangelist/delta-air-lines
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/delta-air-lines
   - type: Website
     url: https://www.delta.com
   - type: Developer Portal
