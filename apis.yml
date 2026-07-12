@@ -45,6 +45,8 @@ apis:
   - url: graphql/delta-airlines-graphql.md
     type: GraphQL
 common:
+- type: DomainSecurity
+  url: security/delta-airlines-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/delta-air-lines
 - type: Website
@@ -53,6 +55,8 @@ common:
   url: https://apiportal.delta.com
 - type: Canonical
   url: https://github.com/api-evangelist/delta-air-lines
+- url: https://news.delta.com/rss.xml
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
