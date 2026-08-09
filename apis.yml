@@ -26,20 +26,19 @@ tags:
 - NDC
 - Travel
 created: '2024-12-03'
-modified: '2026-04-28'
+modified: '2026-08-08'
 specificationVersion: '0.19'
 kind: company
-description: Delta Airlines (alias of Delta Air Lines) is a major U.S. airline providing
-  scheduled air transportation for passengers and cargo throughout the United States
-  and across the world. This repository is an alias of the canonical delta-air-lines
-  profile and points to the same partner developer portal at apiportal.delta.com.
+description: Delta Airlines (alias of Delta Air Lines) is a major U.S. airline providing scheduled air
+  transportation for passengers and cargo throughout the United States and across the world. This repository
+  is an alias of the canonical delta-air-lines profile and points to the same partner developer portal
+  at apiportal.delta.com.
 apis:
 - aid: delta-airlines:delta-api-suite
   name: Delta API Suite
-  description: The Delta API Suite is a partner-facing collection of APIs covering
-    flight search, flight offers and order management, customer journey events, and
-    operational data. Access is restricted to approved partners through Delta's developer
-    portal.
+  description: The Delta API Suite is a partner-facing collection of APIs covering flight search, flight
+    offers and order management, customer journey events, and operational data. Access is restricted to
+    approved partners through Delta's developer portal.
   humanURL: https://apiportal.delta.com
   tags:
   - Flights
@@ -69,6 +68,14 @@ common:
   url: https://github.com/api-evangelist/delta-air-lines
 - url: https://news.delta.com/rss.xml
   type: Blog
+- type: Dev Portal
+  url: https://dev-apiportal.delta.com
+- type: Newsroom
+  url: https://news.delta.com
+- type: Careers
+  url: https://careers.delta.com
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-merged-from:
+- delta-air-lines
