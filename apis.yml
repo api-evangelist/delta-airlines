@@ -44,6 +44,12 @@ apis:
   - Flights
   - NDC
   - Offers
+  - Order
+  - Travel
+  tags_raw:
+  - Flights
+  - NDC
+  - Offers
   - Orders
   - Travel
   properties:
