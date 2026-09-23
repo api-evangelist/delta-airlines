@@ -1,7 +1,9 @@
 ---
 title: Delta Air Lines, Inc – Digital Transformation Strategies
 url: https://www.globaldata.com/store/report/delta-air-lines-enterprise-tech-analysis/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Delta Air Lines" press release artificial intelligence'
 position: 5
 source: serpapi-google

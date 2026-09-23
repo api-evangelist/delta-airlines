@@ -1,7 +1,9 @@
 ---
 title: Delta-AI-Letter.pdf
 url: https://www.gallego.senate.gov/wp-content/uploads/2025/07/Delta-AI-Letter.pdf
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Delta Air Lines" press release artificial intelligence'
 position: 4
 source: serpapi-google
