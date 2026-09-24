@@ -70,8 +70,6 @@ apis:
     url: https://apiportal.delta.com/publish
   - type: Alias
     url: https://github.com/api-evangelist/delta-air-lines
-  - url: graphql/delta-airlines-graphql.md
-    type: GraphQL
 common:
 - type: DomainSecurity
   url: security/delta-airlines-domain-security.yml
