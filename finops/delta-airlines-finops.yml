@@ -126,10 +126,8 @@ apis:
 unitEconomics:
   - name: Cost per Booking
     metric: distribution_cost / bookings
-    target: TBD
   - name: Look-to-Book Ratio
     metric: shop_requests / bookings
-    target: TBD
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
