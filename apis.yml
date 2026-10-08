@@ -71,6 +71,12 @@ apis:
   - type: Alias
     url: https://github.com/api-evangelist/delta-air-lines
 common:
+- type: Plans
+  url: plans/delta-airlines-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/delta-airlines-rate-limits.yml
+- type: FinOps
+  url: finops/delta-airlines-finops.yml
 - type: DomainSecurity
   url: security/delta-airlines-domain-security.yml
 - type: LinkedIn
