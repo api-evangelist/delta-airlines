@@ -1,4 +1,4 @@
-# Delta Airlines (delta-airlines)
+# Delta Airlines
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,45 +64,108 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Delta Airlines (alias of Delta Air Lines) is a major U.S. airline providing scheduled air transportation for passengers and cargo throughout the United States and across the world. This repository is an alias of the canonical [delta-air-lines](https://github.com/api-evangelist/delta-air-lines) profile and points to the same partner developer portal at apiportal.delta.com.
+Delta Airlines (alias of Delta Air Lines) is a major U.S. airline providing scheduled air transportation for passengers and cargo throughout the United States and across the world. This repository is an alias of the canonical delta-air-lines profile and points to the same partner developer portal at apiportal.delta.com.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/delta-airlines/refs/heads/main/apis.yml)
+**Areas:** Air Travel · Airlines · Aviation · Booking · Flights · NDC · Travel
 
-## Scope
+## Delta Airlines on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
-- **x-type:** company
+Everything profiled for Delta Airlines is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/delta-airlines/](https://apis.io/providers/delta-airlines/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Air Travel, Airlines, Aviation, Booking, Flights, NDC, Travel
+- [Delta API Suite](https://apis.io/apis/delta-airlines/delta-api-suite/) — The Delta API Suite is a partner-facing collection of APIs covering flight search, flight offers and order management, customer journey events, and…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-12-03
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### GraphQL (1)
 
-### Delta API Suite
+GraphQL schemas.
 
-The Delta API Suite is a partner-facing collection of APIs covering flight search, flight offers and order management, customer journey events, and operational data. Access is restricted to approved partners through Delta's developer portal.
+- [Moved to /providers/delta-airlines/](https://apis.io/graphqls/delta-airlines/delta-airlines-graphql/)
 
-- **Human URL:** https://apiportal.delta.com
+#### Security (1)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://apiportal.delta.com)
-- [SignUp](https://apiportal.delta.com/publish)
-- [Canonical Repo](https://github.com/api-evangelist/delta-air-lines)
+- [Delta Airlines Domain Security](https://apis.io/security/delta-airlines/delta-airlines-domain-security/)
 
-## Common Properties
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Delta Airlines Plans Pricing](https://apis.io/plans/delta-airlines/delta-airlines-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Delta Airlines Rate Limits](https://apis.io/rate-limits/delta-airlines/delta-airlines-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Delta Airlines Finops](https://apis.io/finops/delta-airlines/delta-airlines-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.delta.com)
-- [Developer Portal](https://apiportal.delta.com)
+- [Blog](https://news.delta.com/rss.xml)
 
-## Maintainers
+## API Evangelist rating
 
-- **Kin Lane** - kin@apievangelist.com
+**Kin Score 11.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.0 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 18.4 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/delta-airlines/](https://apis.io/providers/delta-airlines/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Delta Airlines: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/delta-airlines/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
